@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+// style
+import './style/Global.css';
+import * as Style from "./app.styles";
+// components
+import { AnimeItem } from './components/AnimeItem';
+import { Header } from './components/Header';
+import { Banner } from './components/Banner';
+
+// types
+import AnimeType from './Types/animeType';
+import { SearchResult } from './components/SearchResult';
+
+
 
 function App() {
+  const [animeList, setAnimeList] = useState<AnimeType[]>([]);
+  const [isFetching, setIsFetching] = useState<boolean>(false);
+  const [animeName, setAnimeName] = useState<string>("");
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Style.Container>
+      <Header 
+        setAnimeList={setAnimeList} 
+        setIsFetching={setIsFetching}
+        setAnimeName={setAnimeName}
+      />
+      <Banner/>
+      <Style.Main>  
+        <SearchResult
+          isFetching={isFetching} 
+          animeList={animeList}
+          animeName={animeName}  
+        />
+      </Style.Main>
+    </Style.Container>
   );
 }
 

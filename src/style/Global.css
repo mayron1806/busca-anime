@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap');
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}   
+:root{
+    --blue: #00A8E1;
+    --white: #F4F4F4;
+    --gradient: linear-gradient(266.18deg, #020A21 13.72%, #1DA8DF 98.68%);
+    --background: #1C242F;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Bebas Neue', cursive;
+    /*font-family: 'Inter', sans-serif;*/
+}
