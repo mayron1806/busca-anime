@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 // style
 import './style/Global.css';
 import * as Style from "./app.styles";
@@ -10,6 +10,7 @@ import { Banner } from './components/Banner';
 // types
 import AnimeType from './Types/animeType';
 import { SearchResult } from './components/SearchResult';
+import { AnimeSearch } from './context/animeSearch';
 
 
 
@@ -17,23 +18,25 @@ function App() {
   const [animeList, setAnimeList] = useState<AnimeType[]>([]);
   const [isFetching, setIsFetching] = useState<boolean>(false);
   const [animeName, setAnimeName] = useState<string>("");
- 
+
   return (
-    <Style.Container>
-      <Header 
-        setAnimeList={setAnimeList} 
-        setIsFetching={setIsFetching}
-        setAnimeName={setAnimeName}
-      />
-      <Banner/>
-      <Style.Main>  
-        <SearchResult
-          isFetching={isFetching} 
-          animeList={animeList}
-          animeName={animeName}  
+    <AnimeSearch.Provider 
+      value={{animeName, setAnimeName}}
+    >
+      <Style.Container>
+        <Header 
+          setAnimeList={setAnimeList} 
+          setIsFetching={setIsFetching}
         />
-      </Style.Main>
-    </Style.Container>
+        <Banner/>
+        <Style.Main>  
+          <SearchResult
+            isFetching={isFetching} 
+            animeList={animeList}
+          />
+        </Style.Main>
+      </Style.Container>
+    </AnimeSearch.Provider>
   );
 }
 

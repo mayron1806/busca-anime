@@ -5,19 +5,6 @@ export const Container = styled.div`
   width:100%;
   height: 100%;
 `;
-
-export const Title = styled.h3`
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-`;
-export const TitleMain = styled(Title)`
-  color:var(--blue);
-  display: inline;
-`;
-
 const dotsAnim = keyframes`
   0%{
     content: "";

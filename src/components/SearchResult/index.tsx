@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { useContext } from "react";
 
 //components
 import { AnimeItem } from "../AnimeItem";
@@ -6,32 +6,35 @@ import { AnimeItem } from "../AnimeItem";
 import * as Style from "./searchResult.styles";
 //types 
 import AnimeType from "../../Types/animeType";
+import { SearchTitle } from "../SearchTitle";
+import { AnimeSearch } from "../../context/animeSearch";
 
 type animesSearchProps = {
     isFetching: boolean,
-    animeList: AnimeType[],
-    animeName: string
+    animeList: AnimeType[]
 }
-export const SearchResult = ({isFetching, animeList, animeName} : animesSearchProps)=>{
-    if(animeName === ""){
+export const SearchResult = ({isFetching, animeList} : animesSearchProps)=>{
+    const animeNameContext = useContext(AnimeSearch);
+    
+    if(animeNameContext.animeName === ""){
         return <div></div>
-    }else if(animeName !== "" && isFetching){
+    }else if(animeNameContext.animeName !== "" && isFetching){
         return(
             <Style.Container>
-                <Style.Title>
-                    Resultados da busca:
-                    <Style.TitleMain>{" '" + animeName + "'"}</Style.TitleMain>
-                </Style.Title>
+                <SearchTitle/>
                 <Style.Loading>Carregando</Style.Loading>
+            </Style.Container>
+        )
+    }else if(animeNameContext.animeName !== "" && !isFetching && animeList.length < 1){
+        return(
+            <Style.Container>
+               <SearchTitle/>
             </Style.Container>
         )
     }else{
         return(
             <Style.Container>
-                <Style.Title>
-                    Resultados da busca:
-                    <Style.TitleMain>{" '" + animeName + "'"}</Style.TitleMain>
-                </Style.Title>
+               <SearchTitle/>
                 <Style.AnimeContainer>
                     {
                         animeList.map((anime, index) => 

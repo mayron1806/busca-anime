@@ -1,5 +1,4 @@
-import { Dispatch, FormEvent, SetStateAction } from "react";
-import { useRef } from 'react';
+import { Dispatch, FormEvent, SetStateAction, useContext, useRef } from "react";
 //style
 import * as Style from "./header.styles";
 // services
@@ -11,20 +10,23 @@ import search from "../../assets/icons/search.svg";
 
 //types
 import AnimeType from "../../Types/animeType";
+import { AnimeSearch } from "../../context/animeSearch";
 type headerProps = {
     setIsFetching: Dispatch<SetStateAction<boolean>>
     setAnimeList: Dispatch<SetStateAction<AnimeType[]>>
-    setAnimeName: Dispatch<SetStateAction<string>>
 }
 
-export const Header = ({setIsFetching, setAnimeList, setAnimeName} : headerProps) =>{
+export const Header = ({setIsFetching, setAnimeList} : headerProps) =>{
+    // reference
     const animeInputRef = useRef<HTMLInputElement | null>(null);
+    //context
+    const animeSearch = useContext(AnimeSearch);
 
     const searchAnime = (e: FormEvent) => {
         e.preventDefault();
         if(animeInputRef.current && animeInputRef.current.value.length >= 1){
             setIsFetching(true);
-            setAnimeName(animeInputRef.current.value);
+            animeSearch.setAnimeName(animeInputRef.current.value);
             const getAnimes = async() => {
                 await Animes.getAnimesByName(animeInputRef.current?.value)
                 .then((result)=>{ setAnimeList(result) })
