@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/busca-anime/static/css/main.4b569a79.css",
+    "main.js": "/busca-anime/static/js/main.3fec4a3c.js",
+    "static/js/787.2ceb78fe.chunk.js": "/busca-anime/static/js/787.2ceb78fe.chunk.js",
+    "static/media/background.png": "/busca-anime/static/media/background.b587ccbd8f63cfb7f9df.png",
+    "static/media/logo-github.svg": "/busca-anime/static/media/logo-github.2849d0ec1421f8d7ef25463fa7c4739d.svg",
+    "static/media/logo-linkedin.svg": "/busca-anime/static/media/logo-linkedin.413b4f2332bb7a573ab9a5e5044510ed.svg",
+    "static/media/search.svg": "/busca-anime/static/media/search.a61f64b21921dccf748751fcb3fedb21.svg",
+    "index.html": "/busca-anime/index.html",
+    "static/media/trailer.svg": "/busca-anime/static/media/trailer.7c10678b10e1420a3910572983a1d8e9.svg",
+    "static/media/trailer-button.svg": "/busca-anime/static/media/trailer-button.33c15865a6907794f34945e80fdcf1c3.svg",
+    "main.4b569a79.css.map": "/busca-anime/static/css/main.4b569a79.css.map",
+    "main.3fec4a3c.js.map": "/busca-anime/static/js/main.3fec4a3c.js.map",
+    "787.2ceb78fe.chunk.js.map": "/busca-anime/static/js/787.2ceb78fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b569a79.css",
+    "static/js/main.3fec4a3c.js"
+  ]
+}
