@@ -7,7 +7,7 @@ export const Container = styled.h3`
   font-size: 1.6rem;
   margin-bottom: 1rem;
 `;
-export const Title = styled(Container)`
+export const Title = styled.span`
   color:var(--blue);
   display: inline;
 `;

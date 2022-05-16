@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 type props = {
     background:string
@@ -51,7 +51,7 @@ export const Info = styled.h4<InfoProps>`
 Info.defaultProps = {
     textColor: "var(--white)"
 }
-export const trailerButton = styled.a`
+export const trailerButton = styled.div`
     width: 5rem;
     height: 5rem;
     background-color: var(--background);
