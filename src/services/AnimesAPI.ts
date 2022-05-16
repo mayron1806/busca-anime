@@ -19,12 +19,12 @@ const getAnimesByName = async (name: string | undefined) => {
 }
 // pega um anime aleatorio
 const getRandomAnime = async () => {
+    const randomID = Math.floor(Math.random() * 101)
     let anime : animeType = {} as animeType;
-    await AnimeAPI.get(`random/anime`)
+    await AnimeAPI.get(`anime/${randomID}`)
     .then(res => anime = res.data.data);
     return anime;
 }
-
 const Animes = {
     getAnimesByName,
     getRandomAnime
