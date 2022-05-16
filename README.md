@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Animes legion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um site de busca de animes criado utilizando a jikan API (https://docs.api.jikan.moe).
 
-## Available Scripts
+<img src="./public/print-site.png">
+<hr>
 
-In the project directory, you can run:
+## O que ele faz?
+Ele apresenta algumas funcionalidades como um sistema de recomendação automático, esse sistema sempre irá recomendar um anime diferente ao recarregar a página. Além disso ele tem um sistema de busca, ao digitar o nome de um anime na barra de busca na parte superior do site e apertar a tecla Enter, vão aparecer todos os animes e filmes de anime que tenha alguma relação com o termo pesquisado. 
+É possível acessar a pagina do anime no "My Anime List" clicando sobre o card do anime, e em alguns casos também é possivel acessar o trailer do anime clicando no botão "▶" no canto superior direito do card.
 
-### `npm start`
+Se você quiser saber mais sobre mim e sobre meus projetos e so acessar o meu linkedIn e GitHub no canto superior direito do site ou clicando nos links abaixo.<br>
+GitHub: https://github.com/mayron1806 <br>
+LinkedIn: https://www.linkedin.com/in/mayron-fernandes/
+<hr>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Como rodar o projeto:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Você pode clonar o projeto e rodá-lo localmente seguindo os passos abaixo:
 
-### `npm test`
+- <code>git clone https://github.com/mayron1806/busca-anime </code> para clonar o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- <code>yarn</code> para instalar as dependências do projeto
 
-### `npm run build`
+- <code>yarn start</code>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Acessar http://localhost:3000 no navegador
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

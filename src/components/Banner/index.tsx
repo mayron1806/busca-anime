@@ -9,7 +9,6 @@ import trailer from "../../assets/icons/trailer.svg";
 export const Banner = ()=>{
     // pega um anime aleatorio
     const {anime} = useRandomAnime();
-    console.log(anime);
     return(
         <Style.Container>
             <Style.Info>

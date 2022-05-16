@@ -38,7 +38,7 @@ export const Header = ({setIsFetching, setAnimeList} : headerProps) =>{
     }
     return(
         <Style.Container>
-            <Style.Title>SUPER ANIMES</Style.Title>
+            <Style.Title>Animes Legion</Style.Title>
             <Style.FormSearch onSubmit={(e)=> {searchAnime(e)}}>
                 <Style.Input ref={animeInputRef} type='text' placeholder="Ex: Naruto"/>
                 <Style.Image src={search}/>
