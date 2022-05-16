@@ -17,22 +17,22 @@ export const Banner = ()=>{
                 <Style.Buttons>
                     {
                         anime?.url !== null &&
-                        <Style.OutlineButton href={anime?.url} target="_blank">
+                        <Style.OutlineButton href={anime?.url} target="_blank" rel="noreferrer">
                             MyAnimeList
                         </Style.OutlineButton>
                     }
                     {
                         anime?.trailer.url !== null &&
-                        <Style.FilledButton href={anime?.trailer.url} target="_blank">
+                        <Style.FilledButton href={anime?.trailer.url} target="_blank" rel="noreferrer">
                             <Style.TrailerIcon src={trailer}/>
                             Trailer
                         </Style.FilledButton> 
                     }
                 </Style.Buttons>
             </Style.Info>
-            <Style.Image>
-                <Style.bg src={anime?.images.jpg.image_url} alt="Anime image" />
-            </Style.Image>
+            <Style.ImageContainer>
+                <Style.Image src={anime?.images.jpg.image_url} alt="Anime image" />
+            </Style.ImageContainer>
         </Style.Container>
     )
 }

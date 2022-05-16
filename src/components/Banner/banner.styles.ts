@@ -86,11 +86,10 @@ export const FilledButton = styled(Button)`
 export const TrailerIcon = styled.img`
     width:3rem;
 `;
-export const Image = styled.div`
+export const ImageContainer = styled.div`
     flex-shrink:3;
     background-repeat: no-repeat;
 `;
-export const bg = styled.img`
-
+export const Image = styled.img`
     height: 100%;
 `;
