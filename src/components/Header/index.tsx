@@ -44,12 +44,12 @@ export const Header = ({setIsFetching, setAnimeList} : headerProps) =>{
                 <Style.Image src={search}/>
             </Style.FormSearch>
             <Style.SocialMedia>
-                <a href="https://www.linkedin.com/in/mayron-fernandes/" target="_blank" rel="noreferrer">
+                <Style.Link href="https://www.linkedin.com/in/mayron-fernandes/" target="_blank" rel="noreferrer">
                     <Style.LinkIcon src={linkedin} alt="linkedin-logo" />
-                </a>
-                <a href="https://github.com/mayron1806" target="_blank" rel="noreferrer">
+                </Style.Link>
+                <Style.Link href="https://github.com/mayron1806" target="_blank" rel="noreferrer">
                     <Style.LinkIcon src={github} alt="linkedin-logo" />
-                </a>
+                </Style.Link>
             </Style.SocialMedia>
         </Style.Container>
     )
