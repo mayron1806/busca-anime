@@ -21,11 +21,11 @@ export const Info = styled.div`
     position:relative;
     display:flex;
     flex-direction: column;
-    align-items:center;
     gap: 1rem;
     padding: 1rem 0;
     @media (max-width: 500px){
         text-align:center;
+        align-items:center;
     }
 `;
 export const Title = styled.h3`
@@ -38,7 +38,10 @@ export const Title = styled.h3`
     color: var(--white);
     margin:0;
     margin-bottom:1rem;
-    text-align:center;
+    
+    @media (max-width: 500px){
+        text-align:center;
+    }
 `;
 export const Synopsis = styled.p`
     font-size: 1.4rem;

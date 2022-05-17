@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-    display:grid;
+    display: grid;
     grid-template-areas: "title search-bar links";
     background-color:var(--background);
+    padding: 0.5rem 0;
     @media (max-width: 400px){
         grid-template-areas: "title . links" 
         "search-bar search-bar search-bar";
