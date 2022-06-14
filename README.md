@@ -1,9 +1,15 @@
 # Animes legion
 
-Um site de busca de animes criado utilizando a jikan API (https://docs.api.jikan.moe).
+Um site de busca de animes criado utilizando a jikan API (https://docs.api.jikan.moe).<br>
+Link do projeto ao vivo: https://animeslegion.netlify.app
 
 <img src="./public/print-site.png">
 <hr>
+
+## Tecnologias
+- Typescript
+- ReactJS
+- Styled components
 
 ## O que ele faz?
 Ele apresenta algumas funcionalidades como um sistema de recomendação automático, esse sistema sempre irá recomendar um anime diferente ao recarregar a página. Além disso ele tem um sistema de busca, ao digitar o nome de um anime na barra de busca na parte superior do site e apertar a tecla Enter, vão aparecer todos os animes e filmes de anime que tenha alguma relação com o termo pesquisado. 
